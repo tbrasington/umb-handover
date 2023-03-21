@@ -1,6 +1,33 @@
+@font-face {
+  font-family: 'GT-Pressura-Extended';
+  src: url(./fonts/GT-Pressura-Extended-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GT-Pressura';
+  src: url(./fonts/GT-Pressura-Standard-Text.woff2);
+   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT-Pressura-Mono';
+  src: url(./fonts/GT-Pressura-Mono-Text.woff2);
+   font-weight: 400;
+  font-style: normal;
+}
+
+
+
 /* @link https://utopia.fyi/type/calculator?c=320,14,1.25,1728,18,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
+
+
+
+  /* font sizing, but can be used for other things */
+
   /* Step -2: 8.96px → 10.13px */
   --step--2: clamp(0.56rem, calc(0.54rem + 0.08vw), 0.63rem);
 
@@ -27,8 +54,49 @@
 
   /* Step 6: 53.41px → 100.98px */
   --step-6: clamp(3.34rem, calc(2.66rem + 3.38vw), 6.31rem);
+
+
+  /* font tokens */
+  --font-family-heading : 'GT-Pressura-Extended', mono;
+  --font-weight-heading : 400;
+  --font-family-main : 'GT-Pressura', sans-serif;
+  --font-weight-main : 400;
+
+
+  /* Colors */
+  --color-umb-black: 0,0,0;
+  --color-umb-white: 255,255,255;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: var(--font-family-main);
+  font-weight: 400;
+  color: rgb(var(--color-umb-white));
+  background: rgb(var(--color-umb-black));
+  padding: 2em;
+}
+
+
+ul,
+ol {
+  padding-inline-start: 1em;
+}
+
+blockquote {
+  padding-inline-start: 1em;
+  border-inline-start: 0.3em solid;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--step-5);
+  font-weight: var(--font-weight-heading);
+}
+
+p{
+  font-family: var(--font-family-main);
+  font-size: var(--step-0);
+  font-weight: var(--font-weight-main);
 }
