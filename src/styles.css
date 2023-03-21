@@ -95,8 +95,16 @@
   /* Colors */
   --color-umb-black: 0,0,0;
   --color-umb-white: 255,255,255;
+  --color-umb-grey:158, 158, 158;
   --color-umb-red: 255, 101, 67;
   --color-umb-purple:172, 67, 255;
+  --color-umb-mint:7, 255, 187;
+  --color-umb-red:255, 101, 67;
+  --color-umb-ice-blue:67, 244, 255;
+  --color-umb-light-background : 248, 248, 248;
+  --color-umb-dark-background: 15, 15, 16;
+  --color-umb-error: 112,170,180;
+  --color-umb-paper:255, 255, 232;
 }
 
 
@@ -167,21 +175,75 @@ p {
   align-items: flex-start;
   gap: var(--space-m);
 }
+
+.color-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color : rgb(var(--color-umb-white));
+  gap : var(--space-s);
+  --bg: var(--color-umb-black);
+}
+.color-block span {
+  width : var(--space-2xl);
+  aspect-ratio: 1  / 1;
+  border-radius: 100%;
+  border : 1px solid rgb(var(--color-umb-grey));
+  background: rgb(var(--bg));
+}
+
+.color-block.umb-black {
+  --bg: var(--color-umb-black);
+}
+
+.color-block.umb-white {
+  --bg: var(--color-umb-white);
+}
+.color-block.umb-grey {
+  --bg: var(--color-umb-grey);
+}
+
+.color-block.umb-purple {
+  --bg: var(--color-umb-purple);
+}
+
+.color-block.umb-mint {
+  --bg: var(--color-umb-mint);
+}
+
+.color-block.umb-red {
+  --bg: var(--color-umb-red);
+}
+.color-block.umb-ice-blue {
+  --bg: var(--color-umb-ice-blue);
+}
+.color-block.umb-light-background {
+  --bg: var(--color-umb-light-background);
+}
+.color-block.umb-dark-background {
+  --bg: var(--color-umb-dark-background);
+}
+.color-block.umb-error {
+  --bg: var(--color-umb-error);
+}
+.color-block.umb-paper {
+  --bg: var(--color-umb-paper);
+}
+
 .space-block {
   display: flex;
   align-items: center;
   justify-content: center;
   color : rgb(var(--color-umb-white));
   gap : var(--space-s);
-
   --size: var(--space-3xs);
 }
-
 .space-block span {
   height: var(--size);
   width : var(--size);
   background: rgb(var(--color-umb-purple));
 }
+
 
 .space-block.space-3xs {
   --size: var(--space-3xs);
@@ -238,13 +300,10 @@ p {
   --size: var(--space-2xl-3xl);
 }
 
-
 .space-block p {
   font-size: var(--step--1);
   font-family: var(--font-family-mono);
 }
-
-
 
 /* type styles */
 .headline {
