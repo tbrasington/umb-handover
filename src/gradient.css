@@ -1,0 +1,27 @@
+.gradient {
+    width: 100%;
+    height: 80vh;
+    min-height: 90ex;
+    background: linear-gradient(
+        45deg,
+        rgb(var(--color-umb-ice-blue)),
+        rgb(var(--color-umb-mint)),
+        rgb(var(--color-umb-purple)),
+        rgb(var(--color-umb-red)),
+        rgb(var(--color-umb-ice-blue))
+    );
+    background-size: 400% 400%;
+    animation: gradientAnimation 30s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}

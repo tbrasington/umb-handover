@@ -109,7 +109,8 @@ body {
     font-weight: var(--font-weight-main);
     color: rgb(var(--color-umb-white));
     background: rgb(var(--color-umb-black));
-    padding: 2em;
+    padding: 0;
+    margin: 0;
 }
 
 ul,
