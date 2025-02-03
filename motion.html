@@ -160,12 +160,12 @@
                 gradientLineOutput.style.transform = "scaleY(0)";
 
                 // Reset pill height
-                const pillHeight =
-                    document.querySelector(".feature-output-pill")
-                        .offsetHeight + 2;
+                const pillHeight = document.querySelector(
+                    ".feature-output-pill",
+                ).offsetHeight;
                 document.documentElement.style.setProperty(
                     "--pill-height",
-                    `${pillHeight}px`,
+                    `${pillHeight + 2}px`,
                 );
             }
 
