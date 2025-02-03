@@ -1,362 +1,359 @@
 @font-face {
-  font-family: 'GT-Pressura-Extended';
-  src: url(./fonts/GT-Pressura-Extended-Regular.woff2);
-  font-weight: 400;
-  font-style: normal;
+    font-family: "GT-Pressura-Extended";
+    src: url(./fonts/GT-Pressura-Extended-Regular.woff2);
+    font-weight: 400;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'GT-Pressura';
-  src: url(./fonts/GT-Pressura-Standard-Text.woff2);
-   font-weight: 400;
-  font-style: normal;
+    font-family: "GT-Pressura";
+    src: url(./fonts/GT-Pressura-Standard-Text.woff2);
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'GT-Pressura-Mono';
-  src: url(./fonts/GT-Pressura-Mono-Text.woff2);
-   font-weight: 400;
-  font-style: normal;
+    font-family: "GT-Pressura-Mono";
+    src: url(./fonts/GT-Pressura-Mono-Text.woff2);
+    font-weight: 400;
+    font-style: normal;
 }
-
-
-
 
 :root {
+    /* spacing */
+    /* @link https://utopia.fyi/space/calculator?c=320,14,1.2,1728,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-  /* spacing */
-  /* @link https://utopia.fyi/space/calculator?c=320,14,1.2,1728,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --space-3xs: clamp(0.25rem, calc(0.24rem + 0.07vw), 0.31rem);
+    --space-2xs: clamp(0.44rem, calc(0.41rem + 0.14vw), 0.56rem);
+    --space-xs: clamp(0.69rem, calc(0.64rem + 0.21vw), 0.88rem);
+    --space-s: clamp(0.88rem, calc(0.82rem + 0.28vw), 1.13rem);
+    --space-m: clamp(1.31rem, calc(1.23rem + 0.43vw), 1.69rem);
+    --space-l: clamp(1.75rem, calc(1.64rem + 0.57vw), 2.25rem);
+    --space-xl: clamp(2.63rem, calc(2.45rem + 0.85vw), 3.38rem);
+    --space-2xl: clamp(3.5rem, calc(3.27rem + 1.14vw), 4.5rem);
+    --space-3xl: clamp(5.25rem, calc(4.91rem + 1.7vw), 6.75rem);
 
-  --space-3xs: clamp(0.25rem, calc(0.24rem + 0.07vw), 0.31rem);
-  --space-2xs: clamp(0.44rem, calc(0.41rem + 0.14vw), 0.56rem);
-  --space-xs: clamp(0.69rem, calc(0.64rem + 0.21vw), 0.88rem);
-  --space-s: clamp(0.88rem, calc(0.82rem + 0.28vw), 1.13rem);
-  --space-m: clamp(1.31rem, calc(1.23rem + 0.43vw), 1.69rem);
-  --space-l: clamp(1.75rem, calc(1.64rem + 0.57vw), 2.25rem);
-  --space-xl: clamp(2.63rem, calc(2.45rem + 0.85vw), 3.38rem);
-  --space-2xl: clamp(3.50rem, calc(3.27rem + 1.14vw), 4.50rem);
-  --space-3xl: clamp(5.25rem, calc(4.91rem + 1.70vw), 6.75rem);
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, calc(0.18rem + 0.36vw), 0.56rem);
+    --space-2xs-xs: clamp(0.44rem, calc(0.34rem + 0.5vw), 0.88rem);
+    --space-xs-s: clamp(0.69rem, calc(0.59rem + 0.5vw), 1.13rem);
+    --space-s-m: clamp(0.88rem, calc(0.69rem + 0.92vw), 1.69rem);
+    --space-m-l: clamp(1.31rem, calc(1.1rem + 1.07vw), 2.25rem);
+    --space-l-xl: clamp(1.75rem, calc(1.38rem + 1.85vw), 3.38rem);
+    --space-xl-2xl: clamp(2.63rem, calc(2.2rem + 2.13vw), 4.5rem);
+    --space-2xl-3xl: clamp(3.5rem, calc(2.76rem + 3.69vw), 6.75rem);
 
-  /* One-up pairs */
-  --space-3xs-2xs: clamp(0.25rem, calc(0.18rem + 0.36vw), 0.56rem);
-  --space-2xs-xs: clamp(0.44rem, calc(0.34rem + 0.50vw), 0.88rem);
-  --space-xs-s: clamp(0.69rem, calc(0.59rem + 0.50vw), 1.13rem);
-  --space-s-m: clamp(0.88rem, calc(0.69rem + 0.92vw), 1.69rem);
-  --space-m-l: clamp(1.31rem, calc(1.10rem + 1.07vw), 2.25rem);
-  --space-l-xl: clamp(1.75rem, calc(1.38rem + 1.85vw), 3.38rem);
-  --space-xl-2xl: clamp(2.63rem, calc(2.20rem + 2.13vw), 4.50rem);
-  --space-2xl-3xl: clamp(3.50rem, calc(2.76rem + 3.69vw), 6.75rem);
+    /* font sizing, but can be used for other things */
+    /* @link https://utopia.fyi/type/calculator?c=320,14,1.25,1728,18,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-  /* font sizing, but can be used for other things */
-  /* @link https://utopia.fyi/type/calculator?c=320,14,1.25,1728,18,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 8.96px → 10.13px */
+    --step--2: clamp(0.56rem, calc(0.54rem + 0.08vw), 0.63rem);
 
-  /* Step -2: 8.96px → 10.13px */
-  --step--2: clamp(0.56rem, calc(0.54rem + 0.08vw), 0.63rem);
+    /* Step -1: 11.20px → 13.50px */
+    --step--1: clamp(0.7rem, calc(0.67rem + 0.16vw), 0.84rem);
 
-  /* Step -1: 11.20px → 13.50px */
-  --step--1: clamp(0.7rem, calc(0.67rem + 0.16vw), 0.84rem);
+    /* Step 0: 14.00px → 18.00px */
+    --step-0: clamp(0.88rem, calc(0.82rem + 0.28vw), 1.13rem);
 
-  /* Step 0: 14.00px → 18.00px */
-  --step-0: clamp(0.88rem, calc(0.82rem + 0.28vw), 1.13rem);
+    /* Step 1: 17.50px → 23.99px */
+    --step-1: clamp(1.09rem, calc(1rem + 0.46vw), 1.5rem);
 
-  /* Step 1: 17.50px → 23.99px */
-  --step-1: clamp(1.09rem, calc(1rem + 0.46vw), 1.5rem);
+    /* Step 2: 21.88px → 31.98px */
+    --step-2: clamp(1.37rem, calc(1.22rem + 0.72vw), 2rem);
 
-  /* Step 2: 21.88px → 31.98px */
-  --step-2: clamp(1.37rem, calc(1.22rem + 0.72vw), 2rem);
+    /* Step 3: 27.34px → 42.63px */
+    --step-3: clamp(1.71rem, calc(1.49rem + 1.09vw), 2.66rem);
 
-  /* Step 3: 27.34px → 42.63px */
-  --step-3: clamp(1.71rem, calc(1.49rem + 1.09vw), 2.66rem);
+    /* Step 4: 34.18px → 56.83px */
+    --step-4: clamp(2.14rem, calc(1.81rem + 1.61vw), 3.55rem);
 
-  /* Step 4: 34.18px → 56.83px */
-  --step-4: clamp(2.14rem, calc(1.81rem + 1.61vw), 3.55rem);
+    /* Step 5: 42.72px → 75.76px */
+    --step-5: clamp(2.67rem, calc(2.2rem + 2.35vw), 4.74rem);
 
-  /* Step 5: 42.72px → 75.76px */
-  --step-5: clamp(2.67rem, calc(2.2rem + 2.35vw), 4.74rem);
+    /* Step 6: 53.41px → 100.98px */
+    --step-6: clamp(3.34rem, calc(2.66rem + 3.38vw), 6.31rem);
 
-  /* Step 6: 53.41px → 100.98px */
-  --step-6: clamp(3.34rem, calc(2.66rem + 3.38vw), 6.31rem);
+    /* font tokens */
+    --font-family-heading: "GT-Pressura-Extended", mono;
+    --font-weight-heading: 400;
+    --font-line-height-heading: 1.2;
 
+    --font-family-main: "GT-Pressura", sans-serif;
+    --font-weight-main: 400;
+    --font-line-height-main: 1.5;
+    --font-line-height-main-label: 1.1;
 
-  /* font tokens */
-  --font-family-heading : 'GT-Pressura-Extended', mono;
-  --font-weight-heading : 400;
-  --font-line-height-heading : 1.2;
+    --font-family-mono: "GT-Pressura-Mono", sans-serif;
+    --font-weight-mono: 400;
+    --font-line-height-mono: 1.1;
 
-  --font-family-main : 'GT-Pressura', sans-serif;
-  --font-weight-main : 400;
-  --font-line-height-main : 1.5;
-  --font-line-height-main-label : 1.1;
+    /* Colors */
+    --color-umb-black: 0, 0, 0;
+    --color-umb-white: 255, 255, 255;
+    --color-umb-grey: 158, 158, 158;
+    --color-umb-red: 255, 101, 67;
+    --color-umb-purple: 172, 67, 255;
+    --color-umb-mint: 7, 255, 187;
+    --color-umb-ice-blue: 67, 244, 255;
+    --color-umb-light-background: 248, 248, 248;
+    --color-umb-dark-background: 15, 15, 16;
+    --color-umb-error: 112, 170, 180;
+    --color-umb-paper: 255, 255, 232;
 
-  --font-family-mono : 'GT-Pressura-Mono', sans-serif;
-  --font-weight-mono : 400;
-  --font-line-height-mono : 1.1;
-
-
-  /* Colors */
-  --color-umb-black: 0,0,0;
-  --color-umb-white: 255,255,255;
-  --color-umb-grey:158, 158, 158;
-  --color-umb-red: 255, 101, 67;
-  --color-umb-purple:172, 67, 255;
-  --color-umb-mint:7, 255, 187;
-  --color-umb-ice-blue:67, 244, 255;
-  --color-umb-light-background : 248, 248, 248;
-  --color-umb-dark-background: 15, 15, 16;
-  --color-umb-error: 112,170,180;
-  --color-umb-paper:255, 255, 232;
+    --color-umb-grey-mid: 68, 68, 68;
 }
-
-
 
 /* reset */
 body {
-  font-family: var(--font-family-main);
-  line-height: var(--font-line-height-main);
-  font-weight: var(--font-weight-main);
-  color: rgb(var(--color-umb-white));
-  background: rgb(var(--color-umb-black));
-  padding: 2em;
+    font-family: var(--font-family-main);
+    line-height: var(--font-line-height-main);
+    font-weight: var(--font-weight-main);
+    color: rgb(var(--color-umb-white));
+    background: rgb(var(--color-umb-black));
+    padding: 2em;
 }
-
 
 ul,
 ol {
-  padding-inline-start: 1em;
+    padding-inline-start: 1em;
 }
 
 blockquote {
-  padding-inline-start: 1em;
-  border-inline-start: 0.3em solid;
+    padding-inline-start: 1em;
+    border-inline-start: 0.3em solid;
 }
 
 h1,
 h2,
 h3 {
-  margin:0;
-  font-family: var(--font-family-heading);
-  font-size: var(--step-5);
-  font-weight: var(--font-weight-heading);
+    margin: 0;
+    font-family: var(--font-family-heading);
+    font-size: var(--step-5);
+    font-weight: var(--font-weight-heading);
 }
 
 h2 {
-  font-size: var(--step-4);
+    font-size: var(--step-4);
 }
 h3 {
-  font-size: var(--step-3);
+    font-size: var(--step-3);
 }
 
 p {
-  font-family: var(--font-family-main);
-  font-size: var(--step-0);
-  font-weight: var(--font-weight-main);
-  margin :0
+    font-family: var(--font-family-main);
+    font-size: var(--step-0);
+    font-weight: var(--font-weight-main);
+    margin: 0;
 }
-
 
 /** internal spec components */
 #app {
-  display: flex;
-  flex-direction: column;
-  gap : var(--space-2xl-3xl)
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl-3xl);
 }
 .spec-label {
-  width : 100%;
-  padding-top: var(--space-2xs-xs);
-  border-top : 1px solid rgb(var(--color-umb-purple));
-  font-family: var(--font-family-mono);
-  font-size: var(--step--1);
-  font-weight: var(--font-weight-mono);
-  color: rgb(var(--color-umb-purple));
+    width: 100%;
+    padding-top: var(--space-2xs-xs);
+    border-top: 1px solid rgb(var(--color-umb-purple));
+    font-family: var(--font-family-mono);
+    font-size: var(--step--1);
+    font-weight: var(--font-weight-mono);
+    color: rgb(var(--color-umb-purple));
 }
 .spacing {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-m);
 }
 
 .color-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color : rgb(var(--color-umb-white));
-  gap : var(--space-s);
-  --bg: var(--color-umb-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--color-umb-white));
+    gap: var(--space-s);
+    --bg: var(--color-umb-black);
 }
 .color-block span {
-  width : var(--space-2xl);
-  aspect-ratio: 1  / 1;
-  border-radius: 100%;
-  border : 1px solid rgb(var(--color-umb-grey));
-  background: rgb(var(--bg));
+    width: var(--space-2xl);
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    border: 1px solid rgb(var(--color-umb-grey));
+    background: rgb(var(--bg));
 }
 
 .color-block.umb-black {
-  --bg: var(--color-umb-black);
+    --bg: var(--color-umb-black);
 }
 
 .color-block.umb-white {
-  --bg: var(--color-umb-white);
+    --bg: var(--color-umb-white);
 }
 .color-block.umb-grey {
-  --bg: var(--color-umb-grey);
+    --bg: var(--color-umb-grey);
 }
 
 .color-block.umb-purple {
-  --bg: var(--color-umb-purple);
+    --bg: var(--color-umb-purple);
 }
 
 .color-block.umb-mint {
-  --bg: var(--color-umb-mint);
+    --bg: var(--color-umb-mint);
 }
 
 .color-block.umb-red {
-  --bg: var(--color-umb-red);
+    --bg: var(--color-umb-red);
 }
 .color-block.umb-ice-blue {
-  --bg: var(--color-umb-ice-blue);
+    --bg: var(--color-umb-ice-blue);
 }
 .color-block.umb-light-background {
-  --bg: var(--color-umb-light-background);
+    --bg: var(--color-umb-light-background);
 }
 .color-block.umb-dark-background {
-  --bg: var(--color-umb-dark-background);
+    --bg: var(--color-umb-dark-background);
 }
 .color-block.umb-error {
-  --bg: var(--color-umb-error);
+    --bg: var(--color-umb-error);
 }
 .color-block.umb-paper {
-  --bg: var(--color-umb-paper);
+    --bg: var(--color-umb-paper);
 }
 
 .space-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color : rgb(var(--color-umb-white));
-  gap : var(--space-s);
-  --size: var(--space-3xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--color-umb-white));
+    gap: var(--space-s);
+    --size: var(--space-3xs);
 }
 .space-block span {
-  height: var(--size);
-  width : var(--size);
-  background: rgb(var(--color-umb-purple));
+    height: var(--size);
+    width: var(--size);
+    background: rgb(var(--color-umb-purple));
 }
-
 
 .space-block.space-3xs {
-  --size: var(--space-3xs);
+    --size: var(--space-3xs);
 }
 .space-block.space-2xs {
-  --size: var(--space-2xs);
+    --size: var(--space-2xs);
 }
 
 .space-block.space-xs {
-  --size: var(--space-xs);
+    --size: var(--space-xs);
 }
 .space-block.space-s {
-  --size: var(--space-s);
+    --size: var(--space-s);
 }
 .space-block.space-m {
-  --size: var(--space-m);
+    --size: var(--space-m);
 }
 .space-block.space-l {
-  --size: var(--space-l);
+    --size: var(--space-l);
 }
 .space-block.space-xl {
-  --size: var(--space-xl);
+    --size: var(--space-xl);
 }
 .space-block.space-2xl {
-  --size: var(--space-2xl);
+    --size: var(--space-2xl);
 }
 .space-block.space-3xl {
-  --size: var(--space-3xl);
+    --size: var(--space-3xl);
 }
 
 .space-block.space-3xs-2xs {
-  --size: var(--space-3xs-2xs);
+    --size: var(--space-3xs-2xs);
 }
 
 .space-block.space-2xs-xs {
-  --size: var(--space-2xs-xs);
+    --size: var(--space-2xs-xs);
 }
 .space-block.space-xs-s {
-  --size: var(--space-xs-s);
+    --size: var(--space-xs-s);
 }
 .space-block.space-s-m {
-  --size: var(--space-s-m);
+    --size: var(--space-s-m);
 }
 .space-block.space-m-l {
-  --size: var(--space-m-l);
+    --size: var(--space-m-l);
 }
 .space-block.space-l-xl {
-  --size: var(--space-l-xl);
+    --size: var(--space-l-xl);
 }
 .space-block.space-xl-2xl {
-  --size: var(--space-xl-2xl);
+    --size: var(--space-xl-2xl);
 }
 .space-block.space-2xl-3xl {
-  --size: var(--space-2xl-3xl);
+    --size: var(--space-2xl-3xl);
 }
 
 .space-block p {
-  font-size: var(--step--1);
-  font-family: var(--font-family-mono);
+    font-size: var(--step--1);
+    font-family: var(--font-family-mono);
 }
 
 /* type styles */
 .headline {
-  font-size: var(--step-5);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--font-line-height-heading);
-  font-family: var(--font-family-heading);
+    font-size: var(--step-5);
+    font-weight: var(--font-weight-heading);
+    line-height: var(--font-line-height-heading);
+    font-family: var(--font-family-heading);
 }
 
-.headline.medium{
-  font-size: var(--step-3);
+.headline.medium {
+    font-size: var(--step-3);
 }
-.headline.small{
-  font-size: var(--step-2);
+.headline.small {
+    font-size: var(--step-2);
 }
 
 .paragraph {
-  font-size: var(--step-0);
-  font-weight: var(--font-weight-main);
-  font-family: var(--font-family-main);
-  line-height: var(--font-line-height-paragraph);
+    font-size: var(--step-0);
+    font-weight: var(--font-weight-main);
+    font-family: var(--font-family-main);
+    line-height: var(--font-line-height-paragraph);
 }
 
 .small-label {
-  font-size: var(--step--1);
-  font-weight: var(--font-weight-mono);
-  font-family: var(--font-family-mono);
-  line-height: var(--font-line-height-mono);
-  text-transform: uppercase;
+    font-size: var(--step--1);
+    font-weight: var(--font-weight-mono);
+    font-family: var(--font-family-mono);
+    line-height: var(--font-line-height-mono);
+    text-transform: uppercase;
 }
 
 .small-sentence {
-  font-size: var(--step--1);
-  font-weight: var(--font-weight-mono);
-  font-family: var(--font-family-mono);
-  line-height: var(--font-line-height-mono);
+    font-size: var(--step--1);
+    font-weight: var(--font-weight-mono);
+    font-family: var(--font-family-mono);
+    line-height: var(--font-line-height-mono);
 }
 
 .nav-link {
-  font-size: var(--step-0);
-  font-weight: var(--font-weight-main);
-  font-family: var(--font-family-main);
-  line-height: var(--font-line-height-main-label);
+    font-size: var(--step-0);
+    font-weight: var(--font-weight-main);
+    font-family: var(--font-family-main);
+    line-height: var(--font-line-height-main-label);
 }
 
 .stat {
-  font-size: var(--step-5);
-  font-weight: var(--font-weight-heading);
-  font-family: var(--font-family-heading);
-  line-height: var(--font-line-height-heading);
+    font-size: var(--step-5);
+    font-weight: var(--font-weight-heading);
+    font-family: var(--font-family-heading);
+    line-height: var(--font-line-height-heading);
 }
 
 .paragraph-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-s);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    background-color: red;
 }
