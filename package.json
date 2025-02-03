@@ -2,16 +2,18 @@
   "name": "umbrella",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
   "scripts": {
     "start": "parcel *.html index.html --open",
     "build": "parcel build *.html"
   },
   "dependencies": {
-    "parcel-bundler": "^1.6.1"
+    "motion": "^12.0.11"
   },
   "devDependencies": {
-    "typescript": "4.4.4"
+    "@babel/core": "^7.26.7",
+    "parcel": "^2.13.3",
+    "svgo": "^3",
+    "typescript": "^5.7.3"
   },
   "resolutions": {
     "@babel/preset-env": "7.13.8"
