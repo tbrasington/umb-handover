@@ -281,8 +281,8 @@
                     initializeElements();
                     startEntryAnimation();
                     currentOutputIndex = 0;
-                    setTimeout(animateNextOutputPill, 1500);
-                }, 1000);
+                    setTimeout(animateNextOutputPill, 0);
+                }, 0);
             }
 
             function animateNextOutputPill() {
@@ -332,13 +332,13 @@
                 });
 
                 currentOutputIndex++;
-                setTimeout(animateNextOutputPill, 2000);
+                setTimeout(animateNextOutputPill, 1500);
             }
 
             // Start the initial animation
             initializeElements();
             startEntryAnimation();
-            setTimeout(animateNextOutputPill, 1500);
+            setTimeout(animateNextOutputPill, 500);
         </script>
     </body>
 </html>

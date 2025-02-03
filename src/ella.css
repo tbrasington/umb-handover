@@ -79,11 +79,11 @@
     flex-direction: column;
     width: max-content;
     gap: var(--space-xs);
-    padding-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
 }
 
 .feature-ouput-stack {
-    padding-top: var(--space-2xl);
+    padding-top: var(--space-l);
     padding-bottom: 0;
 }
 #gradient-line {
