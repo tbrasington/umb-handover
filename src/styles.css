@@ -317,6 +317,12 @@ p {
     font-family: var(--font-family-main);
     line-height: var(--font-line-height-paragraph);
 }
+.paragraph-small {
+    font-size: var(--step--1);
+    font-weight: var(--font-weight-main);
+    font-family: var(--font-family-main);
+    line-height: var(--font-line-height-paragraph);
+}
 
 .small-label {
     font-size: var(--step--1);
